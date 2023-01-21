@@ -10,20 +10,27 @@ import { Footer } from "../components/footer/Footer";
 const ReactRouter = createBrowserRouter([
     {
         path: "/",
-        element: <Films />,
-        errorElement: <NotFound />
-    },
-    {
-        path: "/films/:imdbID",
-        element: <Detail />,
-        errorElement: <NotFound />
+        element: <Header />,
+        errorElement: <NotFound />,
+        children: [
+            {
+                path: "/",
+                element: <Films />,
+                errorElement: <NotFound />
+            },
+            {
+                path: "/film/:imdbID",
+                element: <Detail />,
+                errorElement: <NotFound />
+            }
+        ]
     }
 ]);
+
 
 export const Main = (): JSX.Element => {
     return (
         <React.Fragment>
-            <Header />
             <RouterProvider router={ReactRouter} />
             <Footer />
         </React.Fragment>

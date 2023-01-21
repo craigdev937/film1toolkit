@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector, 
     useDispatch } from "react-redux";
+import { FilmReducer } from "./FilmSlice";
 
 export const Reducer = configureStore({
     reducer: {
-        films: () => "Redux-Toolkt Films!"
+        films: FilmReducer,
     },
 });
 

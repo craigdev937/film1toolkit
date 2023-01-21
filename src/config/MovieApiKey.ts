@@ -1,4 +1,4 @@
-export const APIKey = "a6405302";
+export const APIKey: string = "a6405302";
 
 
 
