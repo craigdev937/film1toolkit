@@ -1,5 +1,29 @@
+:root {
+    --background-main: #02060a;
+    --background-alt: #1a242f;
+    --font-main: #fff;
+    --font-alt: #618bdf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-main);
+}
+
 body {
-    background-color: steelblue;
+    background-color: var(--background-main);
+    color: var(--font-main);
+}
+
+.container {
+    margin: 0px 40px;
 }
 
 
