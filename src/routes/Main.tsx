@@ -4,6 +4,8 @@ import { createBrowserRouter,
 import { Films } from "../pages/Films";
 import { Detail } from "../pages/Detail";
 import { NotFound } from "../pages/NotFound";
+import { Header } from "../components/header/Header";
+import { Footer } from "../components/footer/Footer";
 
 const ReactRouter = createBrowserRouter([
     {
@@ -21,7 +23,9 @@ const ReactRouter = createBrowserRouter([
 export const Main = (): JSX.Element => {
     return (
         <React.Fragment>
+            <Header />
             <RouterProvider router={ReactRouter} />
+            <Footer />
         </React.Fragment>
     );
 };
