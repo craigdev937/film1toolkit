@@ -11,7 +11,7 @@ class FetchClass {
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
         console.log(data);
-        return [...data];
+        return [...data.Search];
     });
 
     fetchShows = createAsyncThunk("shows/fetchShows",
@@ -22,10 +22,10 @@ class FetchClass {
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
         console.log(data);
-        return [...data];
+        return [...data.Search];
     });
 };
 
-export const API: FetchClass  = new FetchClass();
+export const API: FetchClass = new FetchClass();
 
 
